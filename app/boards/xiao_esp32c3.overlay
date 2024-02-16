@@ -1,10 +1,47 @@
-/ {
-//	examplesensor0: examplesensor_0 {
-//		compatible = "zephyr,examplesensor";
-//		input-gpios = <&gpioc 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+&twai {
+	status = "disabled"; // CAN bad >:(
+};
+
+&i2c0 {
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_STANDARD>;
+	pinctrl-0 = <&i2c0_default>;
+	pinctrl-names = "default";
+
+    lsm6dsl: lsm6dsl@6A {
+		status = "okay";
+		compatible = "st,lsm6dsl";
+		reg = <0x6A>;
+
+	};
+};
+
+&spi2 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	status = "okay";
+	pinctrl-0 = <&spim2_default>;
+	pinctrl-names = "default";
+
+	// TODO: Figure out display and how to configure in DTS
+//	st7735r: st7735r@0 {
+//		status = "okay";
+//		compatible = "sitronix,st7735r";
+//		reg = <0>;
+//
+////		cmd-data-gpios = <&gpio0 0 0>;
+//		x-offset = <0>;
+//		y-offset = <0>;
 //	};
 };
 
-//&gpioc {
-//	status = "okay";
-//};
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart0_default>;
+	pinctrl-names = "default";
+
+	// TODO: Check Zephyr support for ultrasonic sensors
+};
+
+// TODO: PWM
