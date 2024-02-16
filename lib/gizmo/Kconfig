@@ -1,0 +1,6 @@
+# Copyright (c) 2024 Aaron Chan
+
+config GIZMO
+    bool "Gizmo Libraries"
+    help
+      Gizmo Libraries

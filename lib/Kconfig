@@ -1,3 +1,5 @@
 menu "Libraries"
 
+rsource "gizmo/Kconfig"
+
 endmenu

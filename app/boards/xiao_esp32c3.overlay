@@ -8,10 +8,10 @@
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-names = "default";
 
-    lsm6dsl: lsm6dsl@6A {
+    lsm6dsl: lsm6dsl@6a {
 		status = "okay";
 		compatible = "st,lsm6dsl";
-		reg = <0x6A>;
+		reg = <0x6a>;
 
 	};
 };
