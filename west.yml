@@ -13,4 +13,4 @@ manifest:
       import:
         name-allowlist:
           - cmsis
-          - hal_riscv
+          - hal_nordic

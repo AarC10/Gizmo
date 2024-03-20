@@ -5,10 +5,6 @@
 
 #include <app_version.h>
 
-#include <gizmo/display.h>
-#include <gizmo/motor_control.h>
-#include <gizmo/sensors.h>
-
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/sensor.h>
 
